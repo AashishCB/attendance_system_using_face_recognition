@@ -34,5 +34,25 @@
       {% endfor %}
     {% endif %}
   </div>
-</body>
+  
+
+  <div>
+    <table style="border:1px solid black;width:40%" >
+    {% for row in sheet.iter_rows(min_row=1,max_row=sheet.max_row,min_col=1,max_col=sheet.max_column) %}
+      <tr>
+      {% for cell in row %}
+        <td style="border:1px solid black;">
+        {% if cell.value != None %}
+          {{cell.value}}
+        {% else %}
+          {{pass}}
+        {% endif %}
+        </td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
+
+  </body>
 </html>

@@ -34,7 +34,7 @@ while True:
     else:
         print("Face not Found")
         pass
-    if cv2.waitKey(1)==13 or count==1000:
+    if cv2.waitKey(1)==13 or count==50:
         break
 cap.release()
 cv2.destroyAllWindows()
