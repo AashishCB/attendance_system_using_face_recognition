@@ -12,7 +12,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 count = 0
 while True:
     ret, frame = cap.read()
-    face_classifier = cv2.CascadeClassifier('C:/Users/aashi/PycharmProjects/try1/haarcascade_frontalface_default.xml')
+    face_classifier = cv2.CascadeClassifier('attendance/haarcascade_frontalface_default.xml')
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     faces = face_classifier.detectMultiScale(gray,1.3,5)
 
@@ -34,7 +34,7 @@ while True:
     else:
         print("Face not Found")
         pass
-    if cv2.waitKey(1)==13 or count==50:
+    if cv2.waitKey(1)==13 or count==1000:
         break
 cap.release()
 cv2.destroyAllWindows()

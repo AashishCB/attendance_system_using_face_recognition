@@ -1,7 +1,4 @@
 from flask import Flask, render_template, flash, redirect, url_for, request
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from flask_login import LoginManager
 import os
 import cv2
 from openpyxl import load_workbook

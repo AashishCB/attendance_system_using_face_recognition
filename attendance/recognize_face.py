@@ -4,7 +4,7 @@ from os import listdir
 from os.path import isfile, join
 import os
 
-face_classifier = cv2.CascadeClassifier('C:/Users/aashi/PycharmProjects/try1/haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier('attendance/haarcascade_frontalface_default.xml')
 basedir = os.path.abspath(os.path.dirname(__file__))
 a = {}
 for username in os.listdir(os.path.join(basedir,"static\\", "")):
