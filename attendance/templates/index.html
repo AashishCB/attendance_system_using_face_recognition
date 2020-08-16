@@ -20,6 +20,9 @@
   
   <form method="POST">
     <p>Username <input type = "text" name = "Name" /></p>
+    <p>USN <input type = "text" name = "USN" required/></p>
+    <p>Department <input type = "text" name = "Department" required/></p>
+    <p>Sem <input type = "text" name = "Sem" required/></p>
     <button type="submit" formaction={{url_for('collect_samples')}}>collect sample</button>
   </form>
 
@@ -30,7 +33,7 @@
     <h1>Name of the students</h1>
     {% if students != 'None' %}
       {% for st in students %}
-        <li>{{st}}</li><br />
+        <li>{{st.split(".")[0]}}</li><a href={{url_for('delete_student', username=st.split(".")[0])}}>  DELETE</a><br />
       {% endfor %}
     {% endif %}
   </div>
